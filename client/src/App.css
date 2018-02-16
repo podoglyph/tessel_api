@@ -8,3 +8,7 @@
   padding: 20px;
   color: white;
 }
+
+.led-info span {
+  margin: 3px 5px;
+}
