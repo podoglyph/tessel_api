@@ -26,10 +26,10 @@ class Leds extends Component {
         {this.state.ledList.map((led) =>
           <li key={led._id} className="list-group-item">
             <h3 className="led-color-name">{ led.color }</h3>
-            <div className="led-info">
-              <span>{ led.index }</span>
-              <span>{ led.isOn.toString() }</span>
-            </div>
+            <ul className="led-info list-inline">
+              <li className="list-inline-item">Position: { led.index }</li>
+              <li className="list-inline-item">On: { led.isOn.toString() }</li>
+            </ul>
           </li>
         )}
       </ul>
