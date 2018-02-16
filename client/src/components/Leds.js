@@ -25,7 +25,7 @@ class Leds extends Component {
       <ul className="list-group">
         {this.state.ledList.map((led) =>
           <li key={led._id} className="list-group-item">
-            <h3 className="led-color-name">{ led.color.toUpperCase() }</h3>
+            <h3 className="led-color-name">{ led.color }</h3>
             <div className="led-info">
               <span>{ led.index }</span>
               <span>{ led.isOn.toString() }</span>

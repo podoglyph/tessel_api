@@ -10,7 +10,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to the Tessel Interface</h1>
         </header>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <Leds />
           </div>
         </div>
