@@ -9,6 +9,7 @@
   color: white;
 }
 
-.led-info span {
-  margin: 3px 5px;
+.led-info li {
+  margin-top: 3px;
+  padding: 0px 10px;
 }
