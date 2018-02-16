@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +19,7 @@
     "mongoose": "^5.0.5",
     "nodemon": "^1.14.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
 }

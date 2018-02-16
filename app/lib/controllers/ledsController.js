@@ -21,6 +21,7 @@ router.post('/', function (req, res) {
 });
 
 router.get('/', function (req, res) {
+    console.log('peanutess')
     Led.find({}, function (err, leds) {
         if (err) return res.status(500).send("There was a problem finding the leds.");
         res.status(200).send(leds);
