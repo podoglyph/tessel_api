@@ -5,6 +5,8 @@ const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./app/lib/controllers/ledsController');
 
+app.use(express.static('client'));
+
 app.use('/leds', LedsController);
 
 app.listen(port, function() {
