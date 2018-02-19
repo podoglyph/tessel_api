@@ -20,7 +20,7 @@ class Leds extends Component {
     return leds;
   };
 
-  render() {
+  renderLeds() {
     return (
       <ul className="list-group">
         {this.state.ledList.map((led) =>
@@ -33,6 +33,14 @@ class Leds extends Component {
           </li>
         )}
       </ul>
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderLeds()}
+      </div>
     )
   }
 }
