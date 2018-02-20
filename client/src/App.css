@@ -9,3 +9,14 @@
   color: white;
   text-align: center;
 }
+
+.list-group-item.led-list {
+  text-align: center;
+  margin-left: 15px;
+}
+
+.badge-pill.led-item {
+  padding: 21px;
+  border-radius: 4px;
+  min-width: 66px;
+}
