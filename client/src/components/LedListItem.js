@@ -6,7 +6,6 @@ class LedListItem extends Component {
     this.state = {
       isOn: this.props.led.isOn
     }
-    // const color = props.color;
   }
 
   ledStatus() {
@@ -18,12 +17,13 @@ class LedListItem extends Component {
   }
 
   render() {
+    const color = this.props.led.color;
     return (
       <li className="list-group-item">
         <div className="led-list">
           <div className="led-left">
             <div className="led-color">
-              {console.log(this.state)}
+              { color }
             </div>
           </div>
           <div className="led-right">
