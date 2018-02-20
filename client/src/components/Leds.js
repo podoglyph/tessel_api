@@ -6,12 +6,12 @@ class Leds extends Component {
   }
 
   componentDidMount() {
-    this.callApi()
+    this.getLeds()
       .then(res => this.setState({ ledList: res }))
       .catch(err => console.log(err));
   }
 
-  callApi = async () => {
+  getLeds = async () => {
     const response = await fetch('/leds');
     const leds = await response.json();
 
