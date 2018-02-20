@@ -16,12 +16,18 @@ class LedListItem extends Component {
     }
   }
 
+  toggleLed() {
+    this.setState(prevState => ({
+      isOn: !prevState.isOn
+    }));
+  }
+
   render() {
     const color = this.props.led.color;
     return (
       <li className="list-group-item led-list d-flex justify-content-between align-items-center">
         { color }
-        <button className="badge badge-primary badge-pill led-item">{ this.ledStatus() }</button>
+        <button onClick={this.toggleLed.bind(this)} className="badge badge-primary badge-pill led-item">{ this.ledStatus() }</button>
       </li>
     )
   }
