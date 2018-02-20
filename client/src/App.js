@@ -26,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="row-fluid">
         <header className="App-header">
           <h1 className="App-title">Welcome to the Tessel Interface</h1>
         </header>

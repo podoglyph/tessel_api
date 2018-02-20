@@ -1,32 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const LedListItem = ({led}) => {
-  const color = led.color;
-  const status = () => {
-    if (led.isOn === true) {
+class LedListItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOn: this.props.led.isOn
+    }
+    // const color = props.color;
+  }
+
+  ledStatus() {
+    if (this.state.isOn === true) {
       return "ON";
     } else {
       return "OFF";
     }
   }
 
-  console.log(led)
-  return (
-    <li className="list-group-item">
-      <div className="led-list">
-        <div className="led-left">
-          <div className="led-color">
-            {color}
+  render() {
+    return (
+      <li className="list-group-item">
+        <div className="led-list">
+          <div className="led-left">
+            <div className="led-color">
+              {console.log(this.state)}
+            </div>
+          </div>
+          <div className="led-right">
+            <div className="led-status">
+              { this.ledStatus() }
+            </div>
           </div>
         </div>
-        <div className="led-right">
-          <div className="led-status">
-            {status()}
-          </div>
-        </div>
-      </div>
-    </li>
-  )
+      </li>
+    )
+  }
+
 }
 
 export default LedListItem;
