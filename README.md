@@ -6,7 +6,9 @@ A continuation of learning NodeJS with a Tessel 2 board. This app aims to be a s
 (In Progress. Additions to come.)
 * NodeJS
 * Express
-* MongoDB
+* MongoDB & Mongoose with mLab
+* ReactJS
+
 
 ### The Firmware
 * Tessel 2
