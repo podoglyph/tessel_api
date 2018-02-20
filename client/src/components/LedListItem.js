@@ -18,7 +18,7 @@ class LedListItem extends Component {
 
   toggleLed(id) {
     const data = {
-      isOn: this.state.isOn
+      isOn: !this.state.isOn
     }
     const options = {
       method: "PUT",
