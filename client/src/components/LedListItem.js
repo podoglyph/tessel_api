@@ -19,19 +19,9 @@ class LedListItem extends Component {
   render() {
     const color = this.props.led.color;
     return (
-      <li className="list-group-item">
-        <div className="led-list">
-          <div className="led-left">
-            <div className="led-color">
-              { color }
-            </div>
-          </div>
-          <div className="led-right">
-            <div className="led-status">
-              { this.ledStatus() }
-            </div>
-          </div>
-        </div>
+      <li className="list-group-item led-list d-flex justify-content-between align-items-center">
+        { color }
+        <button className="badge badge-primary badge-pill led-item">{ this.ledStatus() }</button>
       </li>
     )
   }
