@@ -8,7 +8,7 @@ A continuation of learning NodeJS with a Tessel 2 board. This app aims to be a s
 * Express
 * MongoDB
 
-### The Hardware
+### The Firmware
 * Tessel 2
 
 ## License
