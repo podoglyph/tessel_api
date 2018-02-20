@@ -8,8 +8,16 @@ A continuation of learning NodeJS with a Tessel 2 board. This app aims to be a s
 * Express
 * MongoDB
 
-### The Hardware
+### The Firmware
 * Tessel 2
+
+### Setup
+* `git clone <tessel_api> && cd tessel_api`
+* `yarn install`
+* `cd client && yarn install`
+* Create a file `.env` in the project root and add environment variables for your database, e.g.  
+  * `DB_USER=<your_DB_user>`  
+  * `DB_PASS=<your_DB_password>`
 
 ## License
 
