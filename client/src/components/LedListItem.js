@@ -27,6 +27,7 @@ class LedListItem extends Component {
         "Content-Type": "application/json"
       },
     }
+
     fetch('/leds/' + id, options)
       .then(res => {
         if (res.ok) {
