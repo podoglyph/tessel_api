@@ -7,7 +7,7 @@ const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
 const TesselBoard = 'http://stark-tesselator.local:8888';
 
-app.use('/static', express.static(path.join(__dirname, 'client/build')));
+// app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 app.use('/leds', LedsController);
 
