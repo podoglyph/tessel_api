@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import LedList from './components/LedList';
+import Camera from './components/Camera';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +34,7 @@ class App extends Component {
         </header>
         <div className="row">
           <LedList leds={this.state.leds} />
+          <Camera />
         </div>
       </div>
     );
