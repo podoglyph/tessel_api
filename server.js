@@ -7,7 +7,7 @@ const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
 if (process.env.NODE_ENV === "production") {
   console.log("foo")
-  const TesselBoard = `${process.env.IP}`;
+  const TesselBoard = process.env.IP;
 } else {
   console.log("bar")
   const TesselBoard = 'http://stark-tesselator.local:8888';
