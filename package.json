@@ -7,7 +7,8 @@
     "server": "nodemon server.js",
     "client": "cd client && yarn start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "cd client/ && yarn install && yarn install --only=dev --no-shrinkwrap && yarn build"
   },
   "author": "",
   "license": "ISC",
