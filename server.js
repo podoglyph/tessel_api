@@ -15,6 +15,14 @@ app.use('/camera', function(req, res, err) {
   res.redirect(`${TesselBoard}/camera`);
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 app.listen(port, function() {
   console.log('Express server listening on port ' + port);
 });
