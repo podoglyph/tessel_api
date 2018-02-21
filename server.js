@@ -9,6 +9,10 @@ app.use(express.static('client'));
 
 app.use('/leds', LedsController);
 
+app.use('/camera', function(req, res, err) {
+  res.redirect('http://stark-tesselator.local:8888/camera');
+});
+
 app.listen(port, function() {
   console.log('Express server listening on port ' + port);
 });
