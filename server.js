@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const path = require('path');
 const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
