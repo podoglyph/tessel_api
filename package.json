@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "cd client && yarn start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "yarn run start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "heroku-postbuild": "cd client/ && yarn install && yarn install --only=dev --no-shrinkwrap && yarn build"
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false",
+    "build": "yarn install --prefix client && yarn build --prefix client"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "request": "^2.83.0"
   },
   "engines": {
+    "node": "9.4.0",
     "yarn": "1.3.2"
   }
 }
