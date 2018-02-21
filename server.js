@@ -8,6 +8,10 @@ const TesselBoard = 'http://stark-tesselator.local:8888';
 
 app.use(express.static('client'));
 
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
+
 app.use('/leds', LedsController);
 
 app.use('/camera', function(req, res, err) {
