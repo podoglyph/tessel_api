@@ -16,9 +16,11 @@ class LedListItem extends Component {
     }
   }
 
-  toggleLed(id) {
+  toggleLed(id, index) {
     const data = {
-      isOn: !this.state.isOn
+      isOn: !this.state.isOn,
+      toggle: true,
+      index: index
     }
     const options = {
       method: "PUT",
@@ -47,10 +49,11 @@ class LedListItem extends Component {
   render() {
     const color = this.props.led.color;
     const id = this.props.led._id;
+    const index = this.props.led.index
     return (
       <li className="list-group-item led-list d-flex justify-content-between align-items-center">
         { color }
-        <button onClick={this.toggleLed.bind(this, id)} className="badge badge-primary badge-pill led-item">{ this.ledStatus() }</button>
+        <button onClick={this.toggleLed.bind(this, id, index)} className="badge badge-primary badge-pill led-item">{ this.ledStatus() }</button>
       </li>
     )
   }
