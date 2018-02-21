@@ -6,10 +6,9 @@ const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
 if (process.env.NODE_ENV === "production") {
-  const TesselBoard = `${process.env.IP}/leds`;
+  const TesselBoard = `${process.env.IP}`;
 } else {
-  const TesselBoard = 'http://stark-tesselator.local:8888/leds';
-
+  const TesselBoard = 'http://stark-tesselator.local:8888';
 }
 
 // app.use('/static', express.static(path.join(__dirname, 'client/build')));
