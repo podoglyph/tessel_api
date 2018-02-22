@@ -1,17 +1,9 @@
 import React from 'react';
 import Time from './Time.js';
 
-// const stream = '/camera';
+const stream = '/camera';
 
 function Video() {
-  const stream = '';
-  
-  fetch('/camera').then(function(response) {
-    return response.blob();
-  }).then(function(camBlob) {
-    const objectURL = URL.createObjectURL(camBlob);
-    const stream = objectURL;
-  });
 
   return (
 
