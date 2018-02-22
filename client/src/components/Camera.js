@@ -1,7 +1,7 @@
 import React from 'react';
 import Time from './Time.js';
 
-const stream = 'https://65.128.75.135:43333/camera';
+const stream = '/camera';
 
 function Video() {
 
