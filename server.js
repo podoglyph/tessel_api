@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use('/leds', LedsController);
 
 app.use('/camera', function(req, res, err, tesselBoard) {
-  res.redirect(TesselBoard + '/camera');
+  res.redirect(tesselBoard + '/camera');
 });
 
 if (process.env.NODE_ENV === "production") {
