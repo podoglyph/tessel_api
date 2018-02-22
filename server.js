@@ -5,30 +5,18 @@ const path = require('path');
 const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
-<<<<<<< HEAD
-// if (process.env.NODE_ENV === "production") {
-//   const TesselBoard = process.env.IP;
-// } else {
-//   const TesselBoard = 'http://stark-tesselator.local:8888';
-// }
-=======
 if (process.env.NODE_ENV === "production") {
   const TesselBoard = process.env.IP;
 } else {
-  const TesselBoard = 'http://stark-tesselator.local:8888';
+  const TesselBoard = 'https://stark-tesselator.local:8888';
 }
->>>>>>> herokubuild
 
 // app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 app.use('/leds', LedsController);
 
 app.use('/camera', function(req, res, err) {
-<<<<<<< HEAD
-  res.redirect('http://stark-tesselator.local:8888/camera');
-=======
   res.redirect(TesselBoard + '/camera');
->>>>>>> herokubuild
 });
 
 if (process.env.NODE_ENV === "production") {
