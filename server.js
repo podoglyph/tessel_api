@@ -6,16 +6,16 @@ const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
 if (process.env.NODE_ENV === "production") {
-  const TesselBoard = process.env.IP;
+  const tesselBoard = process.env.IP;
 } else {
-  const TesselBoard = 'https://stark-tesselator.local:8888';
+  const tesselBoard = 'https://stark-tesselator.local:8888';
 }
 
 // app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 app.use('/leds', LedsController);
 
-app.use('/camera', function(req, res, err) {
+app.use('/camera', function(req, res, err, tesselBoard) {
   res.redirect(TesselBoard + '/camera');
 });
 
