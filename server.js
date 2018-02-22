@@ -11,7 +11,8 @@ if (process.env.NODE_ENV === "production") {
   const tesselBoard = 'https://stark-tesselator.local:8888';
 }
 
-// app.use('/static', express.static(path.join(__dirname, 'client/build')));
+
+app.use('/static', express.static(`${__dirname}/client/build`));
 
 app.use('/leds', LedsController);
 
