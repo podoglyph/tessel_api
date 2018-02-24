@@ -5,19 +5,22 @@ const path = require('path');
 const port = process.env.PORT || 8000;
 const db = require('./config/db');
 const LedsController = require('./lib/controllers/ledsController');
-if (process.env.NODE_ENV === "production") {
-  const tesselBoard = process.env.IP;
-} else {
-  const tesselBoard = 'https://stark-tesselator.local:8888';
-}
-
+const externalAddress = process.env.IP
+const internalAddress = 'https://stark-tesselator.local:8888'
 
 app.use('/static', express.static(`${__dirname}/client/build`));
 
 app.use('/leds', LedsController);
 
-app.use('/camera', function(req, res, err, tesselBoard) {
-  res.redirect(tesselBoard + '/camera');
+app.use('/camera', function(req, res, err) {
+  function address() {
+    if (process.env.NODE_ENV === 'production') {
+      return externalAddress
+    } else {
+      return internalAddress;
+    }
+  }
+  res.redirect(`${address()}/camera`);
 });
 
 if (process.env.NODE_ENV === "production") {
