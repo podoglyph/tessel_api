@@ -1,7 +1,7 @@
 import React from 'react';
 import Time from './Time.js';
 
-
+const stream = '/camera';
 
 function Video() {
 
@@ -11,7 +11,7 @@ function Video() {
       <div className="image-overlay">
         <div className="image-overlay-data">
           <Time />
-          <img alt="Camera feed" src="https://65.128.75.135:43333/camera"/>
+          <img alt="Camera feed" src={stream} />
         </div>
       </div>
     </div>
