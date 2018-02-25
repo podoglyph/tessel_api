@@ -20,3 +20,42 @@
   border-radius: 4px;
   min-width: 66px;
 }
+
+.camera-feed {
+  text-align: center;
+}
+.camera-feed img {
+  max-width: 100%;
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay-data {
+  color: #fff;
+}
+
+.image-overlay-data .overlay-data-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: right;
+}
+
+.overlay-data-right .list-group-item {
+  background: none;
+  border: none;
+}
+
+.image-overlay-data .overlay-temp {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+.image-overlay-data img {
+  position: relative;
+  z-index: -5;
+  width: 100%;
+}
