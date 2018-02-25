@@ -8,7 +8,7 @@ const LedList = (props) => {
   })
 
   return (
-    <ul className="col-md-3 list-group">
+    <ul className="list-group">
       {ledItems}
     </ul>
   )

@@ -15,7 +15,6 @@ class Temperature extends Component {
     setInterval( () => {
       axios.get(API)
         .then(({ data }) => {
-          console.log(data);
           this.setState({
             currentTempF: data.degreesF.toFixed(1)
           });

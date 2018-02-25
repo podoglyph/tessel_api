@@ -33,7 +33,6 @@ class LedListItem extends Component {
     fetch('/leds/' + id, options)
       .then(res => {
         if (res.ok) {
-          console.log(res)
           return res.json();
         } else {
           throw new Error('Something went wrong ...');

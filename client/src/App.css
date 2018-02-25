@@ -2,13 +2,41 @@
   padding: 0px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+/* Header */
+header {
+  background-color: #1A7;
   padding: 20px;
-  color: white;
-  text-align: center;
+  color: #ddd;
 }
+
+.header-left {
+  float: left;
+}
+
+h1.App-title {
+  font-size: 16px;
+  height: 20px;
+  line-height: 40px;
+}
+
+p.Location {
+  font-size: 12px;
+  height: 20px;
+  line-height: 40px;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #032217;
+}
+
+
+/* COMPONENTS */
+
+/* Led  */
 
 .list-group-item.led-list {
   text-align: center;
@@ -20,6 +48,9 @@
   border-radius: 4px;
   min-width: 66px;
 }
+
+
+/* Camera  */
 
 .camera-feed {
   text-align: center;
@@ -46,6 +77,7 @@
 .overlay-data-right .list-group-item {
   background: none;
   border: none;
+  padding: 2px 6px 2px 1px;
 }
 
 .image-overlay-data .overlay-temp {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './components/Header';
 import LedList from './components/LedList';
 import Camera from './components/Camera';
 
@@ -28,12 +29,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="row-fluid">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to the Tessel Interface</h1>
-        </header>
+      <div className="container-fluid">
+        <Header />
         <div className="row">
-          <LedList leds={this.state.leds} />
+          <div className="col-md-3">
+            <LedList leds={this.state.leds} />
+          </div>
           <Camera />
         </div>
       </div>
