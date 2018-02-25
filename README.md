@@ -1,6 +1,6 @@
 # tessel_api
 
-A continuation of learning NodeJS and React with a Tessel 2 board. This app is a simple API to access on-board leds, a stream from a usb camera, and any additional sensors connected to the device. Once deployed, the Tessel 2 will connect wirelessly to a LAN and may run on battery power. A simple admin panel shows real-time data from sensors and a live video stream. An instance of MongoDB will record connected devices and their various states.
+A continuation of learning NodeJS and React with a Tessel 2 board. This app is a simple API to access on-board leds, a stream from a usb camera, and any additional sensors connected to the device. Once deployed, the Tessel 2 will connect wirelessly to a LAN and may run on battery power. A simple admin panel shows real-time data from sensors and a live video stream. An instance of MongoDB will record the state of connected assets.
 
 Below are two live examples where the Tessel 2 is deployed on battery power and sending a live video stream and temperature data from a basic temperature sensor over a wireless LAN.
 
